@@ -3,10 +3,6 @@
     border-radius: 20px;
     cursor: pointer;
     transition: opacity .3s;
-
-    &-hover {
-        opacity: 0.8;
-    }
 }
 
 .btn-primary {
@@ -18,5 +14,10 @@
 .btn-reverse-primary {
     border: 2px solid $primary-color;
     color: $primary-color;
+    background-color: white;
+}
+
+.card {
+    border-radius: 20px;
     background-color: white;
 }
