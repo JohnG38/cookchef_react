@@ -1,15 +1,23 @@
+import { useState } from 'react';
 import styles from './Recipe.module.scss';
-import recipeImg from '../assets/images/pavlova.jpg';
 
-export default function Recipe() {
+export default function Recipe({title, img}) {
+
+    console.log("rendu du composant");
+    const [liked, setLiked] = useState(false);
+
+    function handleLikeClick() {
+        setLiked(!liked)
+    }
+
     return (
-        <div className={styles.recipe}>
+        <div onClick={handleLikeClick} className={styles.recipe}>
             <div className={styles.recipeImage}>
-                <img src={recipeImg} alt="image recette" />
+                <img src={img} alt="image recette" />
             </div>
-            <div className={`${styles.recipeTitle} d-flex flex-row justify-content-center
-            align-items-center`}>
-                <h3>Pavlova Express</h3>
+            <div className={`${styles.recipeTitle} d-flex flex-column justify-content-center align-items-center`}>
+                <h3 className='mb-20'>{title}</h3>
+                <i className={`fa-solid fa-heart ${liked ? "text-primary" : ""}`}></i>
             </div>
         </div>
     )
