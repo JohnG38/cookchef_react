@@ -1,3 +1,7 @@
+import styles from './Footer.module.scss';
+
 export default function Footer() {
-    return <h1>Footer</h1>
+    return <footer className={`${styles.footer} d-flex flex-row align-items-center justify-content-center p-20`}>
+        <p>Copyright {new Date().getFullYear()} | {new Date().getFullYear() +1} Jonathan Gurden</p>
+    </footer>
 }

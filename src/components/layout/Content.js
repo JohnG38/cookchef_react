@@ -1,3 +1,3 @@
 export default function Content() {
-    return <h1>Content</h1>
+    return <div className="flex-fill">Content</div>
 }
