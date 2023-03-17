@@ -1,8 +1,15 @@
 import './assets/styles/style.scss';
+import Content from './components/layout/Content';
+import Footer from './components/layout/Footer';
+import Header from './components/layout/Header';
 
 function App() {
   return (
-    <h1>Cook Chef App</h1>
+    <div>
+      <Header/>
+      <Content/>
+      <Footer/>
+    </div>
   );
 }
 
